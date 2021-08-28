@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { Component } from "react";
+import { Card } from "./components/Card";
 
 const requestPages = "https://rickandmortyapi.com/graphql";
 
@@ -102,11 +103,6 @@ class App extends Component {
     // });
   };
 
-  handleClick = (e) => {
-    console.log(e.target.parentNode);
-    console.log("Clicado");
-  };
-
   render() {
     const { characters } = this.state;
 
@@ -114,25 +110,7 @@ class App extends Component {
       <section className="container">
         <div className="cards">
           {characters.map((character) => (
-            <div className="card" key={character.id}>
-              <div className="photo-card">
-                <img
-                  src={character.image}
-                  alt={character.name}
-                  className="photo"
-                />
-              </div>
-              <div className="card-content">
-                <h1>Nome: {character.name}</h1>
-                <div className="card-content_character">
-                  <p>Status: {character.status} </p>
-                  <p>Genero: {character.gender}</p>
-                  <p>Natural: {character.origin.name}</p>
-                  <p>Especie: {character.species}</p>
-                </div>
-              </div>
-              <input type="button" value="Entrar" onClick={this.handleClick} />
-            </div>
+            <Card character={character} key={character.id} />
           ))}
         </div>
       </section>
