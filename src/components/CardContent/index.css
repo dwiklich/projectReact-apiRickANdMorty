@@ -7,16 +7,16 @@
 }
 
 .card-content h1 {
-  width: 50%;
-  padding: 10px 100px;
+  text-align: center;
+  width: 150px;
+  box-sizing: content-box;
+  padding: 10px 20px;
   font-style: italic;
-  margin: 0 auto;
   color: rgb(58, 53, 53);
-  box-sizing: border-box;
 }
 
 .card-content_character {
-  width: 50%;
+  width: 40%;
   font-size: small;
   padding: 20px;
   border-left: 1px solid rgba(0, 0, 0, 0.2);
